@@ -16,7 +16,7 @@ public class DepartmentController {
 
     @PostMapping("/department")
     public Department saveDepartment(@Valid @RequestBody Department department) {
-        System.out.println("Inside saveDepartment ");
+        System.out.println("Inside to the saveDepartment ");
         return departmentService.saveDepartment(department);
     }
 
@@ -24,7 +24,6 @@ public class DepartmentController {
     public List<Department> fetchDepartmentlist() {
         return departmentService.fetchDepartmentlist();
     }
-
     @GetMapping("/department/{id}")
     public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
         return departmentService.fetchDepartmentById(departmentId);
